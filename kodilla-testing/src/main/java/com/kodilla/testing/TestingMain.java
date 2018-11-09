@@ -16,12 +16,20 @@ public class TestingMain {
         }
         System.out.println("Test - pierwszy test jednostkowy:");
 
-        double x = 23.4;
-        double y = 17.1;
         Calculator calculator = new Calculator();
-        double sumXY = calculator.addAToB(x, y);
-        double subsXY = calculator.substractAFromB(x, y);
-        System.out.println("Sum of numbers: " + x + " i " + y + " equals " + sumXY);
-        System.out.println("difference of numbers: " + x + " i " + y + " equals " + subsXY);
+        double addResult = calculator.add(180, 20);
+        double subResult = calculator.subtract(180, 20);
+        double multResult = calculator.multiply(180, 20);
+        double divResult = calculator.divide(180, 20);
+        if ((addResult == 200) && (subResult == 160)) {
+            System.out.println("Calculator add and subtract test OK");
+        } else {
+            System.out.println("Calculator has error!");
+        }
+        if ((multResult == 3600) && (divResult == 9)) {
+            System.out.println("Calculator multiply and divide test OK");
+        } else {
+            System.out.println("Calculator has error!");
+        }
     }
 }
